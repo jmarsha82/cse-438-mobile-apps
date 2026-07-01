@@ -2,35 +2,44 @@
 //  Lab4Tests.swift
 //  Lab4Tests
 //
-//  Created by XINYI on 2/25/17.
-//  Copyright © 2017 Tianxinxin iOS. All rights reserved.
-//
 
 import XCTest
 @testable import Lab4
 
 class Lab4Tests: XCTestCase {
-    
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testInfoStoresMovieSearchResultFields() {
+        let info = Info(name: "The Matrix", imdbID: "tt0133093", url: "https://example.com/poster.jpg")
+
+        XCTAssertEqual(info.name, "The Matrix")
+        XCTAssertEqual(info.imdbID, "tt0133093")
+        XCTAssertEqual(info.url, "https://example.com/poster.jpg")
     }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+
+    func testCollectionViewSectionsAreGroupedByRowsOfThree() {
+        let controller = FirstViewController()
+        controller.theData = [
+            Info(name: "A", imdbID: "1", url: "u1"),
+            Info(name: "B", imdbID: "2", url: "u2"),
+            Info(name: "C", imdbID: "3", url: "u3"),
+            Info(name: "D", imdbID: "4", url: "u4"),
+            Info(name: "E", imdbID: "5", url: "u5"),
+            Info(name: "F", imdbID: "6", url: "u6")
+        ]
+
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+        XCTAssertEqual(controller.numberOfSections(in: collectionView), 2)
     }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+
+    func testCollectionViewIgnoresIncompleteTrailingRow() {
+        let controller = FirstViewController()
+        controller.theData = [
+            Info(name: "A", imdbID: "1", url: "u1"),
+            Info(name: "B", imdbID: "2", url: "u2"),
+            Info(name: "C", imdbID: "3", url: "u3"),
+            Info(name: "D", imdbID: "4", url: "u4")
+        ]
+
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+        XCTAssertEqual(controller.numberOfSections(in: collectionView), 1)
     }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
 }

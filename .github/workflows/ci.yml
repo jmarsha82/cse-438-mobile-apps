@@ -1,0 +1,97 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - master
+      - dev
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  unit-tests:
+    name: Unit Tests / ${{ matrix.scheme }}
+    runs-on: macos-15
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - project: Lab1/Lab1.xcodeproj
+            scheme: Lab1
+          - project: Lab2/Lab2.xcodeproj
+            scheme: Lab2
+          - project: Lab3/Lab3.xcodeproj
+            scheme: Lab3
+          - project: Lab4/Lab4.xcodeproj
+            scheme: Lab4
+          - project: Lab5/Lab2.xcodeproj
+            scheme: Lab5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Show Xcode version
+        run: xcodebuild -version
+
+      - name: Run XCTest suite
+        run: bash scripts/test_ios_projects.sh "${{ matrix.project }}" "${{ matrix.scheme }}"
+
+  code-scanning-quality:
+    name: Code Scanning / Quality / SwiftLint
+    runs-on: macos-15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install SwiftLint
+        run: brew install swiftlint
+
+      - name: Run SwiftLint quality scan
+        run: swiftlint lint --config .swiftlint.yml
+
+  code-scanning-security:
+    name: Code Scanning / Security / CodeQL
+    runs-on: macos-15
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v3
+        with:
+          languages: swift
+          queries: security-extended,security-and-quality
+
+      - name: Build projects for CodeQL
+        run: bash scripts/test_ios_projects.sh
+
+      - name: Analyze with CodeQL
+        uses: github/codeql-action/analyze@v3
+        with:
+          category: "/language:swift"
+
+  dependency-review:
+    name: Code Scanning / Security / Dependency Review
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Review dependency changes
+        uses: actions/dependency-review-action@v4
