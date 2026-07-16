@@ -78,7 +78,7 @@ class PathView: UIView {
     
     func createDot(point: CGPoint, radius: CGFloat) -> UIBezierPath {
         let path = UIBezierPath()
-        path.addArc(withCenter: point, radius: radius, startAngle: 0, endAngle: CGFloat(M_PI * 2), clockwise: true)
+        path.addArc(withCenter: point, radius: radius, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
         return path
     }
 }

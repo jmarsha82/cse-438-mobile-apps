@@ -187,7 +187,7 @@ class FirstViewController: UIViewController,UICollectionViewDataSource, UICollec
         // set image and title
         label.text = item.name
         imageView.image = image
-        label.backgroundColor = UIColor(colorLiteralRed: 0, green: 0, blue: 0, alpha: 0.5)
+        label.backgroundColor = UIColor(white: 0, alpha: 0.5)
         
         // add views to cell
         cell.addSubview(imageView)

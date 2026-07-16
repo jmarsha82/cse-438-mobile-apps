@@ -38,7 +38,7 @@ class Player{
     
     // Call item's utility and update player's bag.
     func useItem(itemIndex: Int, pet: Pet) {
-        if (itemIndex > bag.count){
+        if (itemIndex < 0 || itemIndex >= bag.count){
             return //index out of range
         }
         if (bag[itemIndex] <= 0){
@@ -52,7 +52,7 @@ class Player{
     
     // If player can afford price, pay and obtain the item.
     func buyItem (itemIndex: Int) {
-        if (itemIndex > bag.count){
+        if (itemIndex < 0 || itemIndex >= bag.count){
             return //index out of range
         }
         if (Player.itemList[itemIndex].price > coin){

@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="940" viewBox="0 0 1320 940" role="img" aria-labelledby="title desc">
+  <title id="title">CSE 438 iOS coursework UI previews</title>
+  <desc id="desc">Documentation preview image showing six iOS app interfaces from the coursework repository.</desc>
+  <rect width="1320" height="940" fill="#f4f6f8"/>
+  <text x="60" y="72" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#18212f">CSE 438 Mobile Apps UI Preview</text>
+  <text x="60" y="108" font-family="Arial, sans-serif" font-size="18" fill="#5b6675">Static README preview of the UIKit and SpriteKit interfaces in this coursework repo.</text>
+
+  <g transform="translate(60 150)">
+    <rect width="180" height="340" rx="28" fill="#111827"/>
+    <rect x="12" y="18" width="156" height="304" rx="18" fill="#ffffff"/>
+    <text x="28" y="54" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#1f2937">Lab1</text>
+    <text x="28" y="78" font-family="Arial, sans-serif" font-size="11" fill="#6b7280">Discount Calculator</text>
+    <rect x="28" y="102" width="124" height="34" rx="6" fill="#edf2f7" stroke="#cbd5e1"/>
+    <text x="38" y="124" font-family="Arial, sans-serif" font-size="12" fill="#475569">Original price</text>
+    <rect x="28" y="150" width="124" height="34" rx="6" fill="#edf2f7" stroke="#cbd5e1"/>
+    <text x="38" y="172" font-family="Arial, sans-serif" font-size="12" fill="#475569">Discount %</text>
+    <rect x="28" y="198" width="124" height="34" rx="6" fill="#edf2f7" stroke="#cbd5e1"/>
+    <text x="38" y="220" font-family="Arial, sans-serif" font-size="12" fill="#475569">Sales tax %</text>
+    <rect x="28" y="258" width="124" height="42" rx="8" fill="#0f766e"/>
+    <text x="57" y="285" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#ffffff">$88.00</text>
+  </g>
+
+  <g transform="translate(280 150)">
+    <rect width="180" height="340" rx="28" fill="#111827"/>
+    <rect x="12" y="18" width="156" height="304" rx="18" fill="#fff7ed"/>
+    <text x="28" y="54" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#7c2d12">Lab2</text>
+    <text x="28" y="78" font-family="Arial, sans-serif" font-size="11" fill="#9a3412">Virtual Pet</text>
+    <circle cx="90" cy="134" r="46" fill="#fde68a" stroke="#f59e0b" stroke-width="3"/>
+    <circle cx="74" cy="126" r="5" fill="#1f2937"/>
+    <circle cx="106" cy="126" r="5" fill="#1f2937"/>
+    <path d="M75 146 Q90 159 105 146" fill="none" stroke="#1f2937" stroke-width="4" stroke-linecap="round"/>
+    <rect x="30" y="208" width="120" height="12" rx="6" fill="#fed7aa"/>
+    <rect x="30" y="208" width="92" height="12" rx="6" fill="#fb923c"/>
+    <text x="30" y="240" font-family="Arial, sans-serif" font-size="12" fill="#7c2d12">Food and happiness</text>
+    <rect x="34" y="268" width="48" height="30" rx="7" fill="#22c55e"/>
+    <text x="47" y="288" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#ffffff">Feed</text>
+    <rect x="98" y="268" width="48" height="30" rx="7" fill="#3b82f6"/>
+    <text x="112" y="288" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#ffffff">Play</text>
+  </g>
+
+  <g transform="translate(500 150)">
+    <rect width="180" height="340" rx="28" fill="#111827"/>
+    <rect x="12" y="18" width="156" height="304" rx="18" fill="#ffffff"/>
+    <text x="28" y="54" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#1e3a8a">Lab3</text>
+    <text x="28" y="78" font-family="Arial, sans-serif" font-size="11" fill="#475569">Drawing Canvas</text>
+    <rect x="28" y="96" width="124" height="170" rx="8" fill="#f8fafc" stroke="#dbe3ef"/>
+    <path d="M46 222 C65 160 82 178 95 134 S128 102 138 143" fill="none" stroke="#2563eb" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="45" cy="222" r="4" fill="#2563eb"/>
+    <circle cx="138" cy="143" r="4" fill="#2563eb"/>
+    <circle cx="46" cy="292" r="12" fill="#ef4444"/>
+    <circle cx="78" cy="292" r="12" fill="#22c55e"/>
+    <circle cx="110" cy="292" r="12" fill="#2563eb"/>
+    <circle cx="142" cy="292" r="12" fill="#111827"/>
+  </g>
+
+  <g transform="translate(60 540)">
+    <rect width="180" height="340" rx="28" fill="#111827"/>
+    <rect x="12" y="18" width="156" height="304" rx="18" fill="#eef2ff"/>
+    <text x="28" y="54" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#312e81">Lab4</text>
+    <text x="28" y="78" font-family="Arial, sans-serif" font-size="11" fill="#4f46e5">Movie Search</text>
+    <rect x="28" y="96" width="124" height="28" rx="14" fill="#ffffff" stroke="#c7d2fe"/>
+    <text x="43" y="115" font-family="Arial, sans-serif" font-size="11" fill="#64748b">Search movies</text>
+    <g fill="#6366f1">
+      <rect x="30" y="144" width="34" height="52" rx="4"/>
+      <rect x="73" y="144" width="34" height="52" rx="4"/>
+      <rect x="116" y="144" width="34" height="52" rx="4"/>
+      <rect x="30" y="214" width="34" height="52" rx="4"/>
+      <rect x="73" y="214" width="34" height="52" rx="4"/>
+      <rect x="116" y="214" width="34" height="52" rx="4"/>
+    </g>
+    <g fill="#ffffff" opacity="0.85">
+      <rect x="34" y="178" width="26" height="10" rx="2"/>
+      <rect x="77" y="178" width="26" height="10" rx="2"/>
+      <rect x="120" y="178" width="26" height="10" rx="2"/>
+      <rect x="34" y="248" width="26" height="10" rx="2"/>
+      <rect x="77" y="248" width="26" height="10" rx="2"/>
+      <rect x="120" y="248" width="26" height="10" rx="2"/>
+    </g>
+  </g>
+
+  <g transform="translate(280 540)">
+    <rect width="180" height="340" rx="28" fill="#111827"/>
+    <rect x="12" y="18" width="156" height="304" rx="18" fill="#ecfeff"/>
+    <text x="28" y="54" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#155e75">Lab5</text>
+    <text x="28" y="78" font-family="Arial, sans-serif" font-size="11" fill="#0e7490">Pet + SpriteKit</text>
+    <rect x="24" y="96" width="132" height="92" rx="8" fill="#7dd3fc"/>
+    <circle cx="52" cy="120" r="16" fill="#fde047"/>
+    <path d="M24 165 C48 145 65 154 84 139 C108 118 131 142 156 120 L156 188 L24 188 Z" fill="#22c55e"/>
+    <circle cx="91" cy="232" r="38" fill="#fcd34d" stroke="#f59e0b" stroke-width="3"/>
+    <text x="46" y="300" font-family="Arial, sans-serif" font-size="12" fill="#155e75">Snow toggle + pet care</text>
+  </g>
+
+  <g transform="translate(500 540)">
+    <rect width="180" height="340" rx="28" fill="#111827"/>
+    <rect x="12" y="18" width="156" height="304" rx="18" fill="#f8fafc"/>
+    <text x="28" y="54" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#334155">Studio1</text>
+    <text x="28" y="78" font-family="Arial, sans-serif" font-size="11" fill="#64748b">Slider Alpha Demo</text>
+    <rect x="42" y="104" width="96" height="96" rx="14" fill="#94a3b8" opacity="0.72"/>
+    <circle cx="90" cy="146" r="28" fill="#ffffff" opacity="0.65"/>
+    <text x="75" y="238" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#334155">0.72</text>
+    <rect x="34" y="272" width="112" height="8" rx="4" fill="#cbd5e1"/>
+    <rect x="34" y="272" width="82" height="8" rx="4" fill="#334155"/>
+    <circle cx="116" cy="276" r="11" fill="#0f172a"/>
+  </g>
+
+  <g transform="translate(740 168)">
+    <rect width="500" height="650" rx="16" fill="#ffffff" stroke="#d9e1ea"/>
+    <text x="36" y="54" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#18212f">What these previews represent</text>
+    <text x="36" y="96" font-family="Arial, sans-serif" font-size="16" fill="#475569">Lab1: calculator form, state tax picker, final-price output.</text>
+    <text x="36" y="136" font-family="Arial, sans-serif" font-size="16" fill="#475569">Lab2: virtual pet model, shop inventory, feed/play actions.</text>
+    <text x="36" y="176" font-family="Arial, sans-serif" font-size="16" fill="#475569">Lab3: touch drawing with Bezier smoothing and color tools.</text>
+    <text x="36" y="216" font-family="Arial, sans-serif" font-size="16" fill="#475569">Lab4: OMDb search results, poster grid, details, favorites.</text>
+    <text x="36" y="256" font-family="Arial, sans-serif" font-size="16" fill="#475569">Lab5: Lab2 pet care plus SpriteKit scenery and weather toggle.</text>
+    <text x="36" y="296" font-family="Arial, sans-serif" font-size="16" fill="#475569">Studio1: slider-controlled image opacity and value label.</text>
+    <rect x="36" y="342" width="428" height="150" rx="12" fill="#f8fafc" stroke="#dbe3ef"/>
+    <text x="58" y="382" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#334155">Capture note</text>
+    <text x="58" y="416" font-family="Arial, sans-serif" font-size="15" fill="#475569">These are static README previews because the current</text>
+    <text x="58" y="442" font-family="Arial, sans-serif" font-size="15" fill="#475569">workspace is Windows-only and cannot launch Xcode's</text>
+    <text x="58" y="468" font-family="Arial, sans-serif" font-size="15" fill="#475569">iOS Simulator. Replace this image with simulator screenshots</text>
+    <text x="58" y="494" font-family="Arial, sans-serif" font-size="15" fill="#475569">after running the apps on macOS if exact runtime captures are needed.</text>
+  </g>
+</svg>

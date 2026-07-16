@@ -2,35 +2,68 @@
 //  Lab1Tests.swift
 //  Lab1Tests
 //
-//  Created by XINYI on 1/25/17.
-//  Copyright © 2017 Tianxinxin iOS. All rights reserved.
-//
 
 import XCTest
 @testable import Lab1
 
 class Lab1Tests: XCTestCase {
-    
+    private var controller: ViewController!
+    private var originalPrice: UITextField!
+    private var discount: UITextField!
+    private var salesTax: UITextField!
+    private var finalPrice: UILabel!
+
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        controller = ViewController()
+        originalPrice = UITextField()
+        discount = UITextField()
+        salesTax = UITextField()
+        finalPrice = UILabel()
+        controller.originalPrice = originalPrice
+        controller.discount = discount
+        controller.salesTax = salesTax
+        controller.finalPrice = finalPrice
     }
-    
+
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        controller = nil
+        originalPrice = nil
+        discount = nil
+        salesTax = nil
+        finalPrice = nil
         super.tearDown()
     }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+
+    func testUpdateFinalPriceAppliesDiscountThenTax() {
+        controller.originalPrice.text = "100"
+        controller.discount.text = "20"
+        controller.salesTax.text = "10"
+
+        controller.updateFinalPrice()
+
+        XCTAssertEqual(controller.finalPrice.text, "$88.00")
     }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+
+    func testUpdateFinalPriceRejectsInvalidPercentages() {
+        controller.originalPrice.text = "100"
+        controller.discount.text = "150"
+        controller.salesTax.text = "10"
+
+        controller.updateFinalPrice()
+
+        XCTAssertEqual(controller.finalPrice.text, "$???")
     }
-    
+
+    func testStandizeInputBoxFormatsWholeAndFractionalValues() {
+        let field = UITextField()
+
+        field.text = "12.0"
+        controller.standizeInputBox(sender: field)
+        XCTAssertEqual(field.text, "12")
+
+        field.text = "12.345"
+        controller.standizeInputBox(sender: field)
+        XCTAssertEqual(field.text, "12.35")
+    }
 }
